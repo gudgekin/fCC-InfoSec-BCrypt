@@ -3,6 +3,8 @@ const express     = require('express');
 const bodyParser  = require('body-parser');
 const fccTesting  = require('./freeCodeCamp/fcctesting.js');
 const app         = express();
+let bcrypt = require('bcrypt');
+
 fccTesting(app);
 const saltRounds = 12;
 const myPlaintextPassword = 'sUperpassw0rd!';
